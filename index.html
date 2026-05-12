@@ -425,38 +425,37 @@
       <p class="section-desc" style="max-width:560px; margin: 12px auto 0;">Setiap langkah kecil adalah langkah menuju kehidupan yang lebih layak untuk semua penghuni Omah Ogel.</p>
     </div>
 
-    <div class="vid-carousel fade-in">
+    <div class="vid-carousel fade-in" id="vidCarousel">
+
+      <!-- Arrows — di luar stage supaya overflow:hidden tidak memblokir klik -->
+      <button class="vid-arrow vid-arrow-left" id="vidPrev" aria-label="Sebelumnya">&#8592;</button>
 
       <!-- Slide area -->
       <div class="vid-stage" id="vidStage">
 
         <!-- Video 1 -->
-        <div class="vid-slide active" data-index="0">
+        <div class="vid-slide active">
           <video autoplay muted loop playsinline preload="auto">
-            <source src="https://res.cloudinary.com/dyvav3opv/video/upload/v1777902104/lv_0_20260504203846_wgxxxy.mp4">
+            <source src="https://res.cloudinary.com/dyvav3opv/video/upload/v1777902104/lv_0_20260504203846_wgxxxy.mp4" type="video/mp4">
           </video>
           <div class="vid-caption">🎬 Proses Pemotongan bambu untuk persiapan pembuatan Saung</div>
         </div>
 
         <!-- Video 2 -->
-        <div class="vid-slide" data-index="1">
+        <div class="vid-slide">
           <video muted loop playsinline preload="metadata">
             <source src="https://res.cloudinary.com/dvigvyoxo/video/upload/v1776761327/lv_0_20260421154423_med4qh.mp4" type="video/mp4">
           </video>
           <div class="vid-caption">🎬 Penebangan pohon &amp; tanaman perdu, persiapan penggalian pagar keliling</div>
         </div>
 
-        <!-- Arrow Left -->
-        <button class="vid-arrow vid-arrow-left" id="vidPrev" aria-label="Sebelumnya">&#8592;</button>
-        <!-- Arrow Right -->
-        <button class="vid-arrow vid-arrow-right" id="vidNext" aria-label="Berikutnya">&#8594;</button>
+        <!-- ✏️ Tambah video baru: copy salah satu blok <div class="vid-slide"> di atas -->
       </div>
 
-      <!-- Dot indicators -->
-      <div class="vid-dots">
-        <button class="vid-dot active" data-dot="0"></button>
-        <button class="vid-dot" data-dot="1"></button>
-      </div>
+      <button class="vid-arrow vid-arrow-right" id="vidNext" aria-label="Berikutnya">&#8594;</button>
+
+      <!-- Dots di-generate otomatis oleh JS — tidak perlu diubah manual -->
+      <div class="vid-dots" id="vidDots"></div>
 
     </div><!-- end vid-carousel -->
   </div><!-- end container -->
@@ -516,27 +515,30 @@
     </div>
 
     <!-- Activity Video Carousel -->
-    <div class="vid-carousel fade-in" style="max-width:720px; margin:40px auto 32px;">
+    <div class="vid-carousel fade-in" id="actCarousel" style="max-width:720px; margin:40px auto 32px;">
+
+      <button class="vid-arrow vid-arrow-left" id="actPrev" aria-label="Sebelumnya">&#8592;</button>
+
       <div class="vid-stage" id="actStage">
-        <div class="act-slide vid-slide active">
+        <div class="vid-slide active">
           <video muted loop playsinline preload="auto">
             <source src="https://res.cloudinary.com/dyvav3opv/video/upload/v1778385528/VID-20260510-WA0000_bmvh3i.mp4" type="video/mp4">
           </video>
           <div class="vid-caption">🎬 Kegiatan & Momen Bersama Penghuni Omah Ogel</div>
         </div>
-        <div class="act-slide vid-slide">
+        <div class="vid-slide">
           <video muted loop playsinline preload="metadata">
             <source src="https://res.cloudinary.com/dyvav3opv/video/upload/v1776054005/VID-20260413-WA0001_ytejic.mp4" type="video/mp4">
           </video>
           <div class="vid-caption">🎬 Cerita Rescue & Perawatan Hewan Terlantar</div>
         </div>
-        <button class="vid-arrow vid-arrow-left" id="actPrev" aria-label="Sebelumnya">&#8592;</button>
-        <button class="vid-arrow vid-arrow-right" id="actNext" aria-label="Berikutnya">&#8594;</button>
+
+        <!-- ✏️ Tambah video baru: copy salah satu blok <div class="vid-slide"> di atas -->
       </div>
-      <div class="vid-dots">
-        <button class="act-dot vid-dot active"></button>
-        <button class="act-dot vid-dot"></button>
-      </div>
+
+      <button class="vid-arrow vid-arrow-right" id="actNext" aria-label="Berikutnya">&#8594;</button>
+
+      <div class="vid-dots" id="actDots"></div>
     </div>
     <div class="qr-wrap">
       <p class="qr-label">Scan untuk Follow Instagram Kami</p>
