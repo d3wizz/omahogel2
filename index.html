@@ -429,11 +429,9 @@
 
     <div class="vid-carousel fade-in" id="vidCarousel">
 
-      <!-- Arrows — di luar stage supaya overflow:hidden tidak memblokir klik -->
-      <button class="vid-arrow vid-arrow-left" id="vidPrev" aria-label="Sebelumnya">&#8592;</button>
-
-      <!-- Slide area -->
+      <!-- Slide area — arrows now inside stage for correct centering -->
       <div class="vid-stage" id="vidStage">
+        <button class="vid-arrow vid-arrow-left" id="vidPrev" aria-label="Sebelumnya">&#8592;</button>
 
         <!-- Video 1 -->
         <div class="vid-slide active">
@@ -471,11 +469,10 @@
           </video>
         <div class="vid-caption">🎬 Update : 10/11/26 - Progress pembuatan & pemasangan pagar keliling</div>
         </div>
-      </div>
+        <button class="vid-arrow vid-arrow-right" id="vidNext" aria-label="Berikutnya">&#8594;</button>
+      </div><!-- end vid-stage -->
 
-      <button class="vid-arrow vid-arrow-right" id="vidNext" aria-label="Berikutnya">&#8594;</button>
-
-      <!-- Dots di-generate otomatis oleh JS — tidak perlu diubah manual -->
+      <!-- Dots dibuat otomatis oleh JS -->
       <div class="vid-dots" id="vidDots"></div>
 
     </div><!-- end vid-carousel -->
@@ -538,9 +535,8 @@
     <!-- Activity Video Carousel -->
     <div class="vid-carousel fade-in" id="actCarousel" style="max-width:720px; margin:40px auto 32px;">
 
-      <button class="vid-arrow vid-arrow-left" id="actPrev" aria-label="Sebelumnya">&#8592;</button>
-
       <div class="vid-stage" id="actStage">
+        <button class="vid-arrow vid-arrow-left" id="actPrev" aria-label="Sebelumnya">&#8592;</button>
         <div class="vid-slide active">
           <video muted loop playsinline preload="auto">
             <source src="https://res.cloudinary.com/dyvav3opv/video/upload/v1778385528/VID-20260510-WA0000_bmvh3i.mp4" type="video/mp4">
@@ -555,9 +551,8 @@
         </div>
 
         <!-- ✏️ Tambah video baru: copy salah satu blok <div class="vid-slide"> di atas -->
-      </div>
-
-      <button class="vid-arrow vid-arrow-right" id="actNext" aria-label="Berikutnya">&#8594;</button>
+        <button class="vid-arrow vid-arrow-right" id="actNext" aria-label="Berikutnya">&#8594;</button>
+      </div><!-- end vid-stage -->
 
       <div class="vid-dots" id="actDots"></div>
     </div>
